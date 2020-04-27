@@ -1,0 +1,62 @@
+.crystal-image {
+    width: 140px;
+    height: 240px;
+}
+
+body {
+    background-image: url("../images/background.png")
+}
+
+#page-title {
+    background-color: coral;
+    color: white;
+    text-align: left;
+    display: block;
+    float: left;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#instructions {
+    clear: both;
+    float: left;
+    background-color: blanchedalmond;
+    color: coral;
+    font-weight: bold;
+}
+
+#stats {
+    height: 50px;
+}
+
+#targetNumberContainer {
+    clear: both;
+    float: left;
+    background-color: whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+
+#wins-losses-container {
+    background-color: whitesmoke;
+    clear: both;
+    width: 60px;
+}
+
+#crystals {
+    clear: both;
+    float: left;
+}
+
+#scoreContainer {
+    float: left;
+    margin-left: 40px;
+    color: blue;
+    font-weight: bold;
+    font-size: 28px;
+}
