@@ -2,12 +2,8 @@
 
 var wins = 0
 var losses = 0
-var targetNumber = ""
-var score = 0
 
 newRound()
-
-// FUNCTIONS =======================================================================
 
 function newRound() {
     score = 0
@@ -17,29 +13,29 @@ function newRound() {
     $("#targetNumber").text(targetNumber)
     $("#wins").text(wins)
     $("#losses").text(losses)
-}
+    $("#crystals").empty() // <------------- issue right here?
 
-for (i=0; i <= 3 ; i++){
-var crystalValue = Math.floor(Math.random() * 12) + 1
-var imageCrystal = $("<img>")
-imageCrystal.addClass("crystal-image")
-imageCrystal.attr("src", "assets/images/crystal" + [i+1] + ".jpg")
-imageCrystal.attr("data-crystalvalue", crystalValue)
-$("#crystals").append(imageCrystal)
-console.log("Crystal " + [i+1] + " Value = " + crystalValue)
-}
+    for (i=0; i <= 3; i++){
+        var crystalValue = Math.floor(Math.random() * 12) + 1
+        var imageCrystal = $("<img>")
+        imageCrystal.addClass("crystal-image")
+        imageCrystal.attr("src", "assets/images/crystal" + [i+1] + ".jpg")
+        imageCrystal.attr("data-crystalvalue", crystalValue)
+        $("#crystals").append(imageCrystal)
+        console.log("Crystal " + [i+1] + " Value = " + crystalValue)
+    }
+} 
 
-$(".crystal-image").on("click", function(){
-
+$(document).on("click", ".crystal-image", function(){
+    console.log("CLICK")
     var increment = ($(this).attr("data-crystalvalue"));
     increment = parseInt(increment);
 
     score = score += increment;
-    console.log(score)
     $("#score").text(score)
     if (score === targetNumber){
         alert("You win!")
-        wins++;
+        wins++;  
         newRound();
     }
     else if (score >= targetNumber){
