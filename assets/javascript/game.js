@@ -5,6 +5,8 @@ var losses = 0
 
 newRound()
 
+// FUNCTION FOR EACH NEW ROUND =====================================================
+
 function newRound() {
     score = 0
     targetNumber = Math.floor(Math.random() * 101) + 19
@@ -13,7 +15,7 @@ function newRound() {
     $("#targetNumber").text(targetNumber)
     $("#wins").text(wins)
     $("#losses").text(losses)
-    $("#crystals").empty() // <------------- issue right here?
+    $("#crystals").empty()
 
     for (i=0; i <= 3; i++){
         var crystalValue = Math.floor(Math.random() * 12) + 1
@@ -26,8 +28,9 @@ function newRound() {
     }
 } 
 
+// ON CLICK FUNCTION FOR GAME PLAY =================================================
+
 $(document).on("click", ".crystal-image", function(){
-    console.log("CLICK")
     var increment = ($(this).attr("data-crystalvalue"));
     increment = parseInt(increment);
 
@@ -44,5 +47,3 @@ $(document).on("click", ".crystal-image", function(){
         newRound();
     }
 });
-
-

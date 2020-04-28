@@ -10,9 +10,11 @@ body {
 #page-title {
     background-color: coral;
     color: white;
-    text-align: left;
+    text-align: center;
     display: block;
     float: left;
+    margin-bottom: 10px;
+    width: 560px;
 }
 
 h1 {
@@ -26,6 +28,10 @@ h1 {
     background-color: blanchedalmond;
     color: coral;
     font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: 560px;
+    text-align: center;
 }
 
 #stats {
@@ -39,24 +45,53 @@ h1 {
     color: blue;
     font-weight: bold;
     font-size: 28px;
+    width: 240px;
+    padding: 20px;
+    height: 80px;
+    text-align: center;
+    line-height: 1.4;
 }
 
+#scoreContainer {
+    float: left;
+    background-color: whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-size: 28px;
+    width: 240px;
+    padding: 20px;
+    height: 80px;
+    text-align: center;
+    line-height: 1.4;
+}
 
 #wins-losses-container {
-    background-color: whitesmoke;
     clear: both;
-    width: 60px;
+}
+
+#wins-container {
+    float: left;
+    font-size: 28px;
+    width: 240px;
+    background-color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+}
+
+#losses-container {
+    float: left;
+    font-size: 28px;
+    width: 280px;
+    background-color: whitesmoke;
+    padding: 10px;
+    text-align: center;
 }
 
 #crystals {
     clear: both;
     float: left;
+    margin-top: 10px;
 }
 
-#scoreContainer {
-    float: left;
-    margin-left: 40px;
-    color: blue;
-    font-weight: bold;
-    font-size: 28px;
-}
+
+
