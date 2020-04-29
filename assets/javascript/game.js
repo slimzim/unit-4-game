@@ -17,7 +17,7 @@ function newRound() {
     $("#losses").text(losses)
     $("#crystals").empty()
 
-    for (i=0; i <= 3; i++){
+    for (var i=0; i <= 3; i++){
         var crystalValue = Math.floor(Math.random() * 12) + 1
         var imageCrystal = $("<img>")
         imageCrystal.addClass("crystal-image")
